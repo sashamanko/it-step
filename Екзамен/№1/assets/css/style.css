@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 html {
@@ -23,6 +24,12 @@ body {
 a {
     color: #000;
     text-decoration: none;
+}
+
+input,
+select,
+textarea {
+    font-family: 'EB Garamond';
 }
 
 
@@ -50,6 +57,20 @@ a {
 .btn:focus {
     color: #fff;
     background: #e8e8e8;
+}
+
+
+/* Убераю стрелочки с инпута */
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 
@@ -272,7 +293,9 @@ a {
 
 .features {}
 
-.features__container {}
+.features__container {
+    padding-bottom: 25px;
+}
 
 .features__container__title {
     padding: 25px 0;
@@ -333,11 +356,110 @@ a {
 }
 
 
+/* writeToUs
+──────────────────────────────────────────────────────────── */
+
+.writeToUs {}
+
+.writeToUs__form {
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.writeToUs__form__title {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.writeToUs__form__inputs {}
+
+.writeToUs__form__inputs__label {
+    flex-direction: column;
+    width: calc(100% /3);
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.writeToUs__form__inputs__label:not(:last-child) {
+    margin-right: 10px;
+}
+
+.writeToUs__form__inputs__input {
+    padding: 3px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+}
+
+.writeToUs__form__radios {
+    margin-bottom: 10px;
+}
+
+.writeToUs__form__radios__text {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.writeToUs__form__radios__label {
+    margin-right: 15px;
+}
+
+.writeToUs__form__inputs__radio {}
+
+.writeToUs__form__select-label {
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.writeToUs__form__select {
+    padding: 3px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+}
+
+.writeTous__form__textarea-label {
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.writeToUs__form__rexarea {
+    min-height: 100px;
+    padding: 3px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+}
+
+.writeToUs__form__verefication {
+    align-items: center;
+}
+
+.writeTous__form__verefication__checkbox-label {
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.writeTous__form__verefication__checkbox {
+    margin-right: 7px;
+}
+
+.writeToUs__form__verefication__btn {
+    margin-left: auto;
+}
+
+
 /* footer
 ──────────────────────────────────────────────────────────── */
 
 .footer {
     border-top: 1px solid #e8e8e8;
+    margin-top: 30px;
 }
 
 .footer__container {

@@ -228,61 +228,63 @@
             </section>
 
             <section id="write-to-us" class="writeToUs">
-                <form class="writeToUs__form">
+                <form class="writeToUs__form d-flex">
                     <h2 class="writeToUs__form__title">Write to us</h2>
 
-                    <div class="writeToUs__form__inputs">
-                        <label>
+                    <div class="writeToUs__form__inputs d-flex">
+                        <label class="writeToUs__form__inputs__label d-flex">
                             Name:
-                            <input type="text">
+                            <input class="writeToUs__form__inputs__input" type="text">
                         </label>
 
-                        <label>
+                        <label class="writeToUs__form__inputs__label d-flex">
                             Email:
-                            <input type="email">
+                            <input class="writeToUs__form__inputs__input" type="email">
                         </label>
 
-                        <label>
+                        <label class="writeToUs__form__inputs__label d-flex">
                             Phone:
-                            <input type="number">
+                            <input class="writeToUs__form__inputs__input" type="number">
                         </label>
                     </div>
 
-                    <div class="writeToUs__form__radios">
-                        <p>Contact me via:</p>
+                    <div class="writeToUs__form__radios d-flex">
+                        <p class="writeToUs__form__radios__text">Contact me via:</p>
 
-                        <label>
-                            <input type="radio" name="contact" id="email"> Email
+                        <label class="writeToUs__form__radios__label">
+                            <input class="writeToUs__form__inputs__radio" type="radio" name="contact" id="email"> Email
                         </label>
 
-                        <label>
-                            <input type="radio" name="contact" id="phone"> Phone
+                        <label class="writeToUs__form__radios__label">
+                            <input class="writeToUs__form__inputs__radio" type="radio" name="contact" id="phone"> Phone
                         </label>
 
-                        <label>
-                            <input type="radio" name="contact" id="tegram"> Tegram
+                        <label class="writeToUs__form__radios__label">
+                            <input class="writeToUs__form__inputs__radio" type="radio" name="contact" id="tegram"> Tegram
                         </label>
                     </div>
 
-                    <label>
+                    <label class="writeToUs__form__select-label d-flex">
                         Topic:
-                        <select name="topic" id="topic">
+                        <select class="writeToUs__form__select" name="topic" id="topic">
                             <option value="post-my-story" hidden>Post my story</option>
                             <option value="join-the-journey">Join the journey</option>
                             <option value="take-part-in-the-filming">Take part in the filming</option>
                         </select>
                     </label>
 
-                    <label>
+                    <label class="writeTous__form__textarea-label d-flex">
                         Message
-                        <textarea name="message" id="message"></textarea>
+                        <textarea class="writeToUs__form__rexarea" name="message" id="message"></textarea>
                     </label>
 
-                    <label>
-                        <input type="checkbox" name="verefication" id="verefication" required> I am a human
-                    </label>
+                    <di class="writeToUs__form__verefication d-flex">
+                        <label class="writeTous__form__verefication__checkbox-label d-flex">
+                            <input class="writeTous__form__verefication__checkbox" type="checkbox" name="verefication" id="verefication" required> I am a human
+                        </label>
 
-                    <button class="btn">Send</button>
+                        <button class="btn writeToUs__form__verefication__btn">Send</button>
+                    </di>
                 </form>
             </section>
 
