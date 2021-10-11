@@ -246,7 +246,13 @@ input[type=number]::-webkit-outer-spin-button {
     overflow: hidden;
 }
 
+.gallery__slider:hover .gallery__slider__btn-prev,
+.gallery__slider:hover .gallery__slider__btn-next {
+    opacity: 1;
+}
+
 .gallery__slider__item {
+    position: relative;
     width: fit-content;
     height: inherit;
 }
@@ -254,6 +260,47 @@ input[type=number]::-webkit-outer-spin-button {
 .gallery__slider__item>* {
     width: 100%;
     height: inherit;
+}
+
+.gallery__slider__item:hover .gallery__slider__item__des {
+    opacity: 1;
+}
+
+.gallery__slider__item__des {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background: #00000075;
+    transition: .3s;
+    opacity: 0;
+}
+
+.gallery__slider__item__des__title {
+    margin-bottom: 15px;
+}
+
+.gallery__slider__item__des__des {
+    margin-bottom: 15px;
+}
+
+.gallery__slider__item__des__btn {
+    color: #fff;
+    font-size: 8px;
+    border: 1px solid #fff;
+}
+
+.gallery__slider__item__des__btn:hover,
+.gallery__slider__item__des__btn:focus {
+    color: #fff;
+    background: transparent;
 }
 
 .gallery__slider__btn-prev,
