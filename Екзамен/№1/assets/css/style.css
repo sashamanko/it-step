@@ -84,6 +84,42 @@ a {
     background: #e8e8e8;
 }
 
+.burger-btn {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+.burger-btn span {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border: none;
+}
+
+.burger-btn span::before,
+.burger-btn span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background: #000;
+    border: none;
+}
+
+.burger-btn span::before {
+    top: -6px;
+}
+
+.burger-btn span::after {
+    bottom: -6px;
+}
+
 
 /* Убераю стрелочки с инпута */
 
@@ -330,8 +366,8 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1.918%;
-    height: 10%;
+    width: 20px;
+    height: 20px;
     background: transparent;
     border: 4px solid #fff;
     border-right: none;
@@ -572,3 +608,147 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* media
 ──────────────────────────────────────────────────────────── */
+
+@media (max-width:850px) {
+    /* global
+    ──────────────────────────────────────────────────────────── */
+    body {
+        font-size: 12px;
+    }
+    /* header
+    ──────────────────────────────────────────────────────────── */
+    .header__container__navbar__logo {
+        margin-left: 40px;
+    }
+    .header__container__navbar__social-list__item {
+        display: none;
+    }
+    /* main
+    ──────────────────────────────────────────────────────────── */
+    .greeting__container__des__title {
+        font-size: 28px;
+    }
+    .story__img {
+        width: 50%;
+    }
+    .story__content {
+        width: 50%;
+        padding: 0 35px;
+    }
+    .gallery__slider__item {
+        min-width: 50%;
+    }
+    .gallery__slider {
+        height: 190px;
+    }
+    .features__container__features__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        width: 50%;
+    }
+    .features__container__features__item:nth-child(odd) {
+        border-right: 2px solid #e8e8e8;
+        border-bottom: 2px solid #e8e8e8;
+    }
+    .features__container__features__item:nth-child(5) {
+        border-bottom: none;
+    }
+    .features__container__features__item:nth-child(even) {
+        border-bottom: 2px solid #e8e8e8;
+    }
+    .features__container__features__item:nth-child(6) {
+        border-bottom: none;
+    }
+    .writeToUs__form {
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    /* global
+    ──────────────────────────────────────────────────────────── */
+    body {
+        font-size: 12px;
+    }
+    .burger-btn {
+        display: block;
+    }
+    /* header
+    ──────────────────────────────────────────────────────────── */
+    .header__container__navbar__logo {
+        margin-left: 0;
+    }
+    .header__container__navbar__nav-list,
+    .header__container__navbar__social-list {
+        display: none;
+    }
+    /* main
+    ──────────────────────────────────────────────────────────── */
+    .greeting__container {
+        flex-direction: column-reverse;
+    }
+    .greeting__container__des,
+    .greeting__container__img {
+        width: 100%;
+    }
+    .greeting__container__des {
+        padding: 25px 20px;
+    }
+    .greeting__container__des__title {
+        font-size: 28px;
+    }
+    .story {
+        flex-direction: column;
+    }
+    .story:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    .story__img {
+        width: 100%;
+    }
+    .story__content {
+        width: 100%;
+        padding: 25px 20px;
+    }
+    .gallery__slider__item {
+        min-width: 100%;
+    }
+    .gallery__slider {
+        height: 300px;
+    }
+    .features__container__features__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        width: 100%;
+        border-bottom: 2px solid #e8e8e8;
+        border-right: none;
+    }
+    .gallery__slider__item__des {
+        font-size: 24px;
+    }
+    .gallery__slider__item__des__btn {
+        font-size: 18px;
+    }
+    .features__container__features__item:nth-child(1n+1) {
+        border-right: none;
+        border-bottom: 2px solid #e8e8e8;
+    }
+    .writeToUs__form {
+        width: 90%;
+    }
+    .writeToUs__form__inputs {
+        flex-direction: column;
+    }
+    .writeToUs__form__inputs__label {
+        width: 100%;
+    }
+    .writeToUs__form__inputs__label:not(:last-child) {
+        margin: 0;
+    }
+}
